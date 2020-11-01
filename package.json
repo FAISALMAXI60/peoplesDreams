@@ -1,5 +1,6 @@
 {
   "name": "peoeopledream",
+  "homepage": "http://peopledreams.net",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

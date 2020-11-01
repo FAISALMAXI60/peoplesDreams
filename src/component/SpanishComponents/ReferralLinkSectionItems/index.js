@@ -64,7 +64,7 @@ const ReferralLinkItems = (props) => {
           className={classes.referralField}
           disabled={startStation === true ? false : true}
           variant="outlined"
-          value={`https://peopledreams.net/?ref=${userRefId}`}
+          value={`http://peopledreams.net/?ref=${userRefId}`}
           size="small"
           InputProps={{
             endAdornment: (
