@@ -65,7 +65,7 @@ const ReferralLinkItems = (props) => {
           className={classes.referralField}
           variant="outlined"
           size="small"
-          value={`http://peopledreams.net/?ref=${tronWeb&&tronWeb.defaultAddress.base58}`}
+          value={`https://people-dreams-beta.herokuapp.com/?ref=${tronWeb&&tronWeb.defaultAddress.base58}`}
           InputProps={{
             endAdornment: (
               <Button

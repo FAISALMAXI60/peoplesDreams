@@ -64,7 +64,7 @@ const ReferralLinkItems = (props) => {
           className={classes.referralField}
           disabled={startStation === true ? false : true}
           variant="outlined"
-          value={`http://peopledreams.net/?ref=${tronWeb&&tronWeb.defaultAddress.base58}`}
+          value={`https://people-dreams-beta.herokuapp.com/?ref=${tronWeb&&tronWeb.defaultAddress.base58}`}
           size="small"
           InputProps={{
             endAdornment: (
