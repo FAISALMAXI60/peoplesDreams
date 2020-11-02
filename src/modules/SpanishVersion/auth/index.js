@@ -31,7 +31,7 @@ const SpanishAuth = ({ setSelectedLang }) => {
   let getRef = localStorage.getItem("peoplesDreamsRefAddress");
 
   const [tronWeb, setTronWeb] = React.useState();
-  const [trxID, setTrxID] = React.useState(getRef ? getRef : 1);
+  const [trxID, setTrxID] = React.useState(getRef ? getRef : "");
 
   const { isAuthenticated } = useSelector((state) => ({
     isAuthenticated: state.UserReducer.isAuthenticated,
@@ -157,8 +157,11 @@ const SpanishAuth = ({ setSelectedLang }) => {
                 localStorage.setItem("loadingById", "false");
               } else {
                 getContract
-                  .regUser(trxID)
-                  .send()
+                  .buyStartStation(trxID)
+                  .send({
+                    feeLimit: 100_000_000,
+                    callValue: tronWeb.toSun(15),
+                  })
                   .then((value) => {
                     getUserData(tronWeb.defaultAddress.base58, tronWeb).then(
                       () => {

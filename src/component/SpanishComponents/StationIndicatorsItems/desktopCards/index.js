@@ -175,7 +175,7 @@ const StationCards = (props) => {
                   className={classes.buyButtonStylingSpanish}
                   onClick={buyStationOne}
                 >
-                  Comprar
+                  COMPRA/BUY
                 </Button>
               </>
             )}
@@ -205,7 +205,7 @@ const StationCards = (props) => {
                   color="primary"
                   className={classes.buyButtonStylingSpanish}
                 >
-                  comprar
+                  COMPRA/BUY
                 </Button>
               </>
             )}
@@ -237,7 +237,7 @@ const StationCards = (props) => {
                   color="primary"
                   className={classes.buyButtonStylingSpanish}
                 >
-                  comprar
+                  COMPRA/BUY
                 </Button>
               </>
             )}
@@ -277,7 +277,7 @@ const StationCards = (props) => {
                   color="primary"
                   className={classes.buyButtonStylingSpanish}
                 >
-                  comprar
+                  COMPRA/BUY
                 </Button>
               </>
             )}
@@ -319,7 +319,7 @@ const StationCards = (props) => {
                   color="primary"
                   className={classes.buyButtonStylingSpanish}
                 >
-                  comprar
+                  COMPRA/BUY
                 </Button>
               </>
             )}
@@ -363,7 +363,7 @@ const StationCards = (props) => {
                   color="primary"
                   className={classes.buyButtonStylingSpanish}
                 >
-                  Comprar
+                  COMPRA/BUY
                 </Button>
               </>
             )}

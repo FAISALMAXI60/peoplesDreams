@@ -23,7 +23,8 @@ export default makeStyles((theme) => ({
   buyButtonStyling:{
     position: "absolute",
     top: "69%",
-    left: "48%",
+    // left: "48%",
+    right:0,
     transform: "translate(-50%, -50%)",
     fontWeight: "bold",
     color: "white",

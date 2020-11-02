@@ -296,7 +296,7 @@ const MobileIndiCards = (props) => {
                   className={classes.buyButtonStyling2}
                   onClick={buyStationOne}
                 >
-                  Buy
+                  COMPRA/BUY
                 </Button>
               )}
             </div>
@@ -345,7 +345,7 @@ const MobileIndiCards = (props) => {
                   color="primary"
                   className={classes.buyButtonStyling2}
                 >
-                  Buy
+                  COMPRA/BUY
                 </Button>
               )}
             </div>
@@ -396,7 +396,7 @@ const MobileIndiCards = (props) => {
                   color="primary"
                   className={classes.buyButtonStyling2}
                 >
-                  Buy
+                  COMPRA/BUY
                 </Button>
               )}
             </div>
@@ -455,7 +455,7 @@ const MobileIndiCards = (props) => {
                   color="primary"
                   className={classes.buyButtonStyling2}
                 >
-                  Buy
+                  COMPRA/BUY
                 </Button>
               )}
             </div>
@@ -517,7 +517,7 @@ const MobileIndiCards = (props) => {
                   color="primary"
                   className={classes.buyButtonStyling2}
                 >
-                  Buy
+                  COMPRA/BUY
                 </Button>
               )}
             </div>
@@ -580,7 +580,7 @@ const MobileIndiCards = (props) => {
                   color="primary"
                   className={classes.buyButtonStyling2}
                 >
-                  Buy
+                  COMPRA/BUY
                 </Button>
               )}
             </div>

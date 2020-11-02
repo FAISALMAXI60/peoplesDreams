@@ -178,7 +178,7 @@ const StationCards = (props) => {
                     className={classes.buyButtonStyling}
                     onClick={buyStationOne}
                   >
-                    Buy
+                    COMPRA/BUY
                   </Button>
                 </div>
               </>
@@ -209,7 +209,7 @@ const StationCards = (props) => {
                   color="primary"
                   className={classes.buyButtonStyling}
                 >
-                  Buy
+                  COMPRA/BUY
                 </Button>
               </>
             )}
@@ -241,7 +241,7 @@ const StationCards = (props) => {
                   color="primary"
                   className={classes.buyButtonStyling}
                 >
-                  Buy
+                  COMPRA/BUY
                 </Button>
               </>
             )}
@@ -281,7 +281,7 @@ const StationCards = (props) => {
                   variant="contained"
                   color="primary"
                 >
-                  Buy
+                  COMPRA/BUY
                 </Button>
               </>
             )}
@@ -324,7 +324,7 @@ const StationCards = (props) => {
                   color="primary"
                   className={classes.buyButtonStyling}
                 >
-                  Buy
+                  COMPRA/BUY
                 </Button>
               </>
             )}
@@ -368,7 +368,7 @@ const StationCards = (props) => {
                   color="primary"
                   className={classes.buyButtonStyling}
                 >
-                  Buy
+                  COMPRA/BUY
                 </Button>
               </>
             )}

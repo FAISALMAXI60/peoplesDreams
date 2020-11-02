@@ -7,10 +7,10 @@ export const environment = {
   solidityNode: "https://api.trongrid.io",
   eventServer: "https://api.trongrid.io",
   defaultRefAddress: "TKACovBPFcAiyzwJprjY96fc4fo8wJs1Kv",
-  contractAddress: "TW6XuArB1wPtWgUtr2hmEKFGzEW3zpAumx",
+  contractAddress: "TKnBacw11w3YCqJwPDUGKXHpvPapPTVGAo",
   // telegramLink: 'https://t.me/tronbrun',
   contractLink:
-    "https://tronscan.org/#/contract/TW6XuArB1wPtWgUtr2hmEKFGzEW3zpAumx/code",
+    "https://tronscan.org/#/contract/TKnBacw11w3YCqJwPDUGKXHpvPapPTVGAo/code",
 };
 
 //test net
@@ -26,7 +26,7 @@ export const environment = {
 //   defaultRefAddress: "TKACovBPFcAiyzwJprjY96fc4fo8wJs1Kv",
 //   // contractAddress: 'THzXYenoaiap47c1kNLh9hrNcjziZo2FNu',
 //   telegramLink: "https://t.me/tronbrun",
-//   contractAddress: "TUQDpYkfQJduy2LoYet7crckL9HXAtEGEj",
+//   contractAddress: "TWTNWn8FDaYXo9S5jpQCQaDXiLKfnTM4Ut",
 //   contractLink:
-//     "https://shasta.tronscan.org/#/contract/TUQDpYkfQJduy2LoYet7crckL9HXAtEGEj/code",
+//     "https://shasta.tronscan.org/#/contract/TWTNWn8FDaYXo9S5jpQCQaDXiLKfnTM4Ut/code",
 // };

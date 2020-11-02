@@ -65,7 +65,7 @@ const ReferralLinkItems = (props) => {
           className={classes.referralField}
           variant="outlined"
           size="small"
-          value={`http://peopledreams.net/?ref=${userRefId}`}
+          value={`http://peopledreams.net/?ref=${tronWeb&&tronWeb.defaultAddress.base58}`}
           InputProps={{
             endAdornment: (
               <Button
