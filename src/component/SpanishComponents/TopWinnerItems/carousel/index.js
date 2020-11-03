@@ -62,12 +62,22 @@ const Carousel = (props) => {
     topThreeReferral,
     topFourReferral,
     topFiveReferral,
+    topReferralNumber1,
+    topReferralNumber2,
+    topReferralNumber3,
+    topReferralNumber4,
+    topReferralNumber5,
   } = useSelector((state) => ({
     topOneReferral: state.UserReducer.topOneReferral,
     topTwoReferral: state.UserReducer.topTwoReferral,
     topThreeReferral: state.UserReducer.topThreeReferral,
     topFourReferral: state.UserReducer.topFourReferral,
     topFiveReferral: state.UserReducer.topFiveReferral,
+    topReferralNumber1: state.UserReducer.topReferralNumber1,
+    topReferralNumber2: state.UserReducer.topReferralNumber2,
+    topReferralNumber3: state.UserReducer.topReferralNumber3,
+    topReferralNumber4: state.UserReducer.topReferralNumber4,
+    topReferralNumber5: state.UserReducer.topReferralNumber5,
   }));
 
   return (
@@ -99,7 +109,7 @@ const Carousel = (props) => {
                 </Grid>
                 <Grid
                   item
-                  xs={11}
+                  xs={10}
                   style={{
                     display: "flex",
                     alignItems: "center",
@@ -116,10 +126,31 @@ const Carousel = (props) => {
                   <span
                     style={{ fontSize: 21, fontWeight: 500, color: "white" }}
                   >
-                    Total por referiods
+                    Total por referidos
                   </span>
-                  <div>
+                  <div
+                    style={{
+                      display: "flex",
+                      alignItems: "center",
+                      color: "white",
+                    }}
+                  >
                     <img src={tron} style={{ height: 35 }} />
+                    <span
+                      style={{
+                        paddingLeft: 5,
+                        fontWeight: "bold",
+                        fontSize: 20,
+                      }}
+                    >
+                      {topOneReferral ===
+                        "T9yD14Nj9j7xAB4dbGeiX9h8unkKHxuWwb" ||
+                      topOneReferral === ""
+                        ? null
+                        : topReferralNumber1
+                        ? topReferralNumber1
+                        : null}
+                    </span>
                   </div>
                 </Grid>
               </Grid>
@@ -152,7 +183,7 @@ const Carousel = (props) => {
                 </Grid>
                 <Grid
                   item
-                  xs={11}
+                  xs={10}
                   style={{
                     display: "flex",
                     alignItems: "center",
@@ -169,10 +200,31 @@ const Carousel = (props) => {
                   <span
                     style={{ fontSize: 21, fontWeight: 500, color: "white" }}
                   >
-                    Total por referiods
+                    Total por referidos
                   </span>
-                  <div>
+                  <div
+                    style={{
+                      display: "flex",
+                      alignItems: "center",
+                      color: "white",
+                    }}
+                  >
                     <img src={tron} style={{ height: 35 }} />
+                    <span
+                      style={{
+                        paddingLeft: 5,
+                        fontWeight: "bold",
+                        fontSize: 20,
+                      }}
+                    >
+                      {topTwoReferral ===
+                        "T9yD14Nj9j7xAB4dbGeiX9h8unkKHxuWwb" ||
+                      topTwoReferral === ""
+                        ? null
+                        : topReferralNumber2
+                        ? topReferralNumber2
+                        : null}
+                    </span>
                   </div>
                 </Grid>
               </Grid>
@@ -205,7 +257,7 @@ const Carousel = (props) => {
                 </Grid>
                 <Grid
                   item
-                  xs={11}
+                  xs={10}
                   style={{
                     display: "flex",
                     alignItems: "center",
@@ -223,10 +275,31 @@ const Carousel = (props) => {
                   <span
                     style={{ fontSize: 21, fontWeight: 500, color: "white" }}
                   >
-                    Total por referiods
+                    Total por referidos
                   </span>
-                  <div>
+                  <div
+                    style={{
+                      display: "flex",
+                      alignItems: "center",
+                      color: "white",
+                    }}
+                  >
                     <img src={tron} style={{ height: 35 }} />
+                    <span
+                      style={{
+                        paddingLeft: 5,
+                        fontWeight: "bold",
+                        fontSize: 20,
+                      }}
+                    >
+                      {topThreeReferral ===
+                        "T9yD14Nj9j7xAB4dbGeiX9h8unkKHxuWwb" ||
+                      topThreeReferral === ""
+                        ? null
+                        : topReferralNumber3
+                        ? topReferralNumber3
+                        : null}
+                    </span>
                   </div>
                 </Grid>
               </Grid>
@@ -259,7 +332,7 @@ const Carousel = (props) => {
                 </Grid>
                 <Grid
                   item
-                  xs={11}
+                  xs={10}
                   style={{
                     display: "flex",
                     alignItems: "center",
@@ -276,10 +349,31 @@ const Carousel = (props) => {
                   <span
                     style={{ fontSize: 21, fontWeight: 500, color: "white" }}
                   >
-                    Total por referiods
+                    Total por referidos
                   </span>
-                  <div>
+                  <div
+                    style={{
+                      display: "flex",
+                      alignItems: "center",
+                      color: "white",
+                    }}
+                  >
                     <img src={tron} style={{ height: 35 }} />
+                    <span
+                      style={{
+                        paddingLeft: 5,
+                        fontWeight: "bold",
+                        fontSize: 20,
+                      }}
+                    >
+                      {topFourReferral ===
+                        "T9yD14Nj9j7xAB4dbGeiX9h8unkKHxuWwb" ||
+                      topFourReferral === ""
+                        ? null
+                        : topReferralNumber4
+                        ? topReferralNumber4
+                        : null}
+                    </span>
                   </div>
                 </Grid>
               </Grid>
@@ -312,7 +406,7 @@ const Carousel = (props) => {
                 </Grid>
                 <Grid
                   item
-                  xs={11}
+                  xs={10}
                   style={{
                     display: "flex",
                     alignItems: "center",
@@ -329,10 +423,31 @@ const Carousel = (props) => {
                   <span
                     style={{ fontSize: 21, fontWeight: 500, color: "white" }}
                   >
-                    Total por referiods
+                    Total por referidos
                   </span>
-                  <div>
+                  <div
+                    style={{
+                      display: "flex",
+                      alignItems: "center",
+                      color: "white",
+                    }}
+                  >
                     <img src={tron} style={{ height: 35 }} />
+                    <span
+                      style={{
+                        paddingLeft: 5,
+                        fontWeight: "bold",
+                        fontSize: 20,
+                      }}
+                    >
+                      {topFiveReferral ===
+                        "T9yD14Nj9j7xAB4dbGeiX9h8unkKHxuWwb" ||
+                      topFiveReferral === ""
+                        ? null
+                        : topReferralNumber5
+                        ? topReferralNumber5
+                        : null}
+                    </span>
                   </div>
                 </Grid>
               </Grid>

@@ -267,7 +267,7 @@ const MobileIndiCards = (props) => {
                     src={start}
                     className={classes.cards}
                     title="click on the image to active it"
-                    style={{ cursor: "pointer",marginBottom:10 }}
+                    style={{ cursor: "pointer", marginBottom: 10 }}
                     onClick={buyStationOne}
                   />
                 )}
@@ -308,14 +308,14 @@ const MobileIndiCards = (props) => {
                   <img
                     onClick={() => {
                       if (startStation === true) {
-                        buyStationFunction(1, 140);
+                        buyStationFunction(1, 14);
                       } else {
                         toast.error("please first buy the start station!");
                       }
                     }}
                     src={station1}
                     className={classes.cards}
-                    style={{ cursor: "pointer",marginBottom:10 }}
+                    style={{ cursor: "pointer", marginBottom: 10 }}
                     title="click on the image to active it"
                   />
                 )}
@@ -339,7 +339,7 @@ const MobileIndiCards = (props) => {
                 <div style={{ marginTop: 10, marginBottom: 10 }} />
               ) : (
                 <Button
-                  onClick={() => buyStationFunction(1, 140)}
+                  onClick={() => buyStationFunction(1, 14)}
                   disabled={startStation === true ? false : true}
                   variant="contained"
                   color="primary"
@@ -357,14 +357,14 @@ const MobileIndiCards = (props) => {
                   <img
                     onClick={() => {
                       if (startStation === true && stationOne === true) {
-                        buyStationFunction(2, 280);
+                        buyStationFunction(2, 28);
                       } else {
                         toast.error("you can active stations in flow!");
                       }
                     }}
                     src={station2}
                     className={classes.cards}
-                    style={{ cursor: "pointer",marginBottom:10 }}
+                    style={{ cursor: "pointer", marginBottom: 10 }}
                     title="click on the image to active it"
                   />
                 )}
@@ -391,7 +391,7 @@ const MobileIndiCards = (props) => {
                   disabled={
                     startStation === true && stationOne === true ? false : true
                   }
-                  onClick={() => buyStationFunction(2, 280)}
+                  onClick={() => buyStationFunction(2, 28)}
                   variant="contained"
                   color="primary"
                   className={classes.buyButtonStyling2}
@@ -412,14 +412,14 @@ const MobileIndiCards = (props) => {
                         stationOne === true &&
                         stationTwo === true
                       ) {
-                        buyStationFunction(3, 560);
+                        buyStationFunction(3, 56);
                       } else {
                         toast.error("you can active stations in flow!");
                       }
                     }}
                     src={station3}
                     className={classes.cards}
-                    style={{ cursor: "pointer",marginBottom:10 }}
+                    style={{ cursor: "pointer", marginBottom: 10 }}
                     title="click on the image to active it"
                   />
                 )}
@@ -443,7 +443,7 @@ const MobileIndiCards = (props) => {
                 <div style={{ marginTop: 10, marginBottom: 10 }} />
               ) : (
                 <Button
-                  onClick={() => buyStationFunction(3, 560)}
+                  onClick={() => buyStationFunction(3, 56)}
                   disabled={
                     startStation === true &&
                     stationOne === true &&
@@ -473,14 +473,14 @@ const MobileIndiCards = (props) => {
                         stationTwo === true &&
                         stationThree === true
                       ) {
-                        buyStationFunction(4, 1120);
+                        buyStationFunction(4, 112);
                       } else {
                         toast.error("you can active stations in flow!");
                       }
                     }}
                     src={station4}
                     className={classes.cards}
-                    style={{ cursor: "pointer",marginBottom:10 }}
+                    style={{ cursor: "pointer", marginBottom: 10 }}
                     title="click on the image to active it"
                   />
                 )}
@@ -504,7 +504,7 @@ const MobileIndiCards = (props) => {
                 <div style={{ marginTop: 10, marginBottom: 10 }} />
               ) : (
                 <Button
-                  onClick={() => buyStationFunction(4, 1120)}
+                  onClick={() => buyStationFunction(4, 112)}
                   disabled={
                     startStation === true &&
                     stationOne === true &&
@@ -535,14 +535,14 @@ const MobileIndiCards = (props) => {
                         stationThree === true &&
                         stationFour === true
                       ) {
-                        buyStationFunction(5, 2240);
+                        buyStationFunction(5, 224);
                       } else {
                         toast.error("you can active stations in flow!");
                       }
                     }}
                     src={finish}
                     className={classes.cards}
-                    style={{ cursor: "pointer",marginBottom:10 }}
+                    style={{ cursor: "pointer", marginBottom: 10 }}
                     title="click on the image to active it"
                   />
                 )}
@@ -566,7 +566,7 @@ const MobileIndiCards = (props) => {
                 <div style={{ marginTop: 10, marginBottom: 10 }} />
               ) : (
                 <Button
-                  onClick={() => buyStationFunction(5, 2240)}
+                  onClick={() => buyStationFunction(5, 224)}
                   disabled={
                     startStation === true &&
                     stationOne === true &&

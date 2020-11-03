@@ -36,6 +36,13 @@ let initState = {
   topFourReferral: "",
   topFiveReferral: "",
 
+  //top referrals number
+  topReferralNumber1: "",
+  topReferralNumber2: "",
+  topReferralNumber3: "",
+  topReferralNumber4: "",
+  topReferralNumber5: "",
+
   //user ref id
   userRefId: "",
 };
@@ -43,6 +50,37 @@ let initState = {
 export const UserReducer = (state = initState, action) => {
   const { type, payload } = action;
   switch (type) {
+    //top referral numbers
+    case "TOP_REFERRAL_1_NUMBERS":
+      return {
+        ...state,
+        topReferralNumber1: payload,
+      };
+
+    case "TOP_REFERRAL_2_NUMBERS":
+      return {
+        ...state,
+        topReferralNumber2: payload,
+      };
+
+    case "TOP_REFERRAL_3_NUMBERS":
+      return {
+        ...state,
+        topReferralNumber3: payload,
+      };
+
+    case "TOP_REFERRAL_4_NUMBERS":
+      return {
+        ...state,
+        topReferralNumber4: payload,
+      };
+
+    case "TOP_REFERRAL_5_NUMBERS":
+      return {
+        ...state,
+        topReferralNumber5: payload,
+      };
+
     case "USER_REF_ID":
       return {
         ...state,

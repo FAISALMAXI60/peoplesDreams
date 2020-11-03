@@ -66,13 +66,12 @@ export default makeStyles((theme) => ({
   buyButtonStylingSpan2: {
     position: "absolute",
     top: "69%",
-    // left: "35%",
     fontSize:9,
     right:80,
     transform: "translate(-50%, -50%)",
     fontWeight: "bold",
-    color: "white",
-    // borderRadius: 10,
-    // marginTop:10
+    borderRadius: 10,
+    backgroundColor: "#FFCD36",
+    color:"#A64993"
   },
 }));

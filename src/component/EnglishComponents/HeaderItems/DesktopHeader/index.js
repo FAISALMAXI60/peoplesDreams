@@ -4,6 +4,7 @@ import Grid from "@material-ui/core/Grid";
 import headerLogo from "../../../../assets/headstrong/headstock desktop version.png";
 import store from "../../../../redux/store";
 import { useSelector } from "react-redux";
+import logo from "../../../../assets/betaLogo.jpeg";
 
 /**
  * @author
@@ -29,6 +30,15 @@ const DesktopHeader = (props) => {
   };
   return (
     <Grid container className={classes.mainContainer}>
+      {/* <div
+        style={{
+          backgroundColor: "#A64993",
+          width: "100%",
+          height: 500,
+        }}
+      >
+        <img src={logo} />
+      </div> */}
       {isAuthenticated ? (
         <span
           style={{

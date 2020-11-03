@@ -309,7 +309,7 @@ const MobileIndiCards = (props) => {
                   <img
                     onClick={() => {
                       if (startStation === true) {
-                        buyStationFunction(1, 140);
+                        buyStationFunction(1, 14);
                       } else {
                         toast.error("¡Primero compre la estación de inicio!");
                       }
@@ -340,7 +340,7 @@ const MobileIndiCards = (props) => {
                 <div style={{ marginTop: 10, marginBottom: 10 }} />
               ) : (
                 <Button
-                  onClick={() => buyStationFunction(1, 140)}
+                  onClick={() => buyStationFunction(1, 14)}
                   disabled={startStation === true ? false : true}
                   variant="contained"
                   color="primary"
@@ -358,7 +358,7 @@ const MobileIndiCards = (props) => {
                   <img
                     onClick={() => {
                       if (startStation === true && stationOne === true) {
-                        buyStationFunction(2, 280);
+                        buyStationFunction(2, 28);
                       } else {
                         toast.error("¡Puedes activar estaciones en flujo!");
                       }
@@ -392,7 +392,7 @@ const MobileIndiCards = (props) => {
                   disabled={
                     startStation === true && stationOne === true ? false : true
                   }
-                  onClick={() => buyStationFunction(2, 280)}
+                  onClick={() => buyStationFunction(2, 28)}
                   variant="contained"
                   color="primary"
                   className={classes.buyButtonStylingSpan2}
@@ -413,7 +413,7 @@ const MobileIndiCards = (props) => {
                         stationOne === true &&
                         stationTwo === true
                       ) {
-                        buyStationFunction(3, 560);
+                        buyStationFunction(3, 56);
                       } else {
                         toast.error("¡Puedes activar estaciones en flujo!");
                       }
@@ -444,7 +444,7 @@ const MobileIndiCards = (props) => {
                 <div style={{ marginTop: 10, marginBottom: 10 }} />
               ) : (
                 <Button
-                  onClick={() => buyStationFunction(3, 560)}
+                  onClick={() => buyStationFunction(3, 56)}
                   disabled={
                     startStation === true &&
                     stationOne === true &&
@@ -473,7 +473,7 @@ const MobileIndiCards = (props) => {
                         stationTwo === true &&
                         stationThree === true
                       ) {
-                        buyStationFunction(4, 1120);
+                        buyStationFunction(4, 112);
                       } else {
                         toast.error("¡Puedes activar estaciones en flujo!");
                       }
@@ -504,7 +504,7 @@ const MobileIndiCards = (props) => {
                 <div style={{ marginTop: 10, marginBottom: 10 }} />
               ) : (
                 <Button
-                  onClick={() => buyStationFunction(4, 1120)}
+                  onClick={() => buyStationFunction(4, 112)}
                   disabled={
                     startStation === true &&
                     stationOne === true &&
@@ -535,7 +535,7 @@ const MobileIndiCards = (props) => {
                         stationThree === true &&
                         stationFour === true
                       ) {
-                        buyStationFunction(5, 2240);
+                        buyStationFunction(5, 224);
                       } else {
                         toast.error("¡Puedes activar estaciones en flujo!");
                       }
@@ -566,7 +566,7 @@ const MobileIndiCards = (props) => {
                 <div style={{ marginTop: 10, marginBottom: 10 }} />
               ) : (
                 <Button
-                  onClick={() => buyStationFunction(5, 2240)}
+                  onClick={() => buyStationFunction(5, 224)}
                   disabled={
                     startStation === true &&
                     stationOne === true &&

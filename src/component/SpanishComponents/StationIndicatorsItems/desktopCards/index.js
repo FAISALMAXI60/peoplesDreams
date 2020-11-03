@@ -188,7 +188,7 @@ const StationCards = (props) => {
                 <img
                   onClick={() => {
                     if (startStation === true) {
-                      buyStationFunction(1, 140);
+                      buyStationFunction(1, 14);
                     } else {
                       toast.error("¡Primero compre la estación de inicio!");
                     }
@@ -199,7 +199,7 @@ const StationCards = (props) => {
                   title="haga clic en la imagen para activarla"
                 />
                 <Button
-                  onClick={() => buyStationFunction(1, 140)}
+                  onClick={() => buyStationFunction(1, 14)}
                   disabled={startStation === true ? false : true}
                   variant="contained"
                   color="primary"
@@ -218,7 +218,7 @@ const StationCards = (props) => {
                 <img
                   onClick={() => {
                     if (startStation === true && stationOne === true) {
-                      buyStationFunction(2, 280);
+                      buyStationFunction(2, 28);
                     } else {
                       toast.error("¡Puedes activar estaciones en flujo!");
                     }
@@ -229,7 +229,7 @@ const StationCards = (props) => {
                   title="haga clic en la imagen para activarla"
                 />
                 <Button
-                  onClick={() => buyStationFunction(2, 280)}
+                  onClick={() => buyStationFunction(2, 28)}
                   disabled={
                     startStation === true && stationOne === true ? false : true
                   }
@@ -254,7 +254,7 @@ const StationCards = (props) => {
                       stationOne === true &&
                       stationTwo === true
                     ) {
-                      buyStationFunction(3, 560);
+                      buyStationFunction(3, 56);
                     } else {
                       toast.error("¡Puedes activar estaciones en flujo!");
                     }
@@ -265,7 +265,7 @@ const StationCards = (props) => {
                   title="haga clic en la imagen para activarla"
                 />
                 <Button
-                  onClick={() => buyStationFunction(3, 560)}
+                  onClick={() => buyStationFunction(3, 56)}
                   disabled={
                     startStation === true &&
                     stationOne === true &&
@@ -295,7 +295,7 @@ const StationCards = (props) => {
                       stationTwo === true &&
                       stationThree === true
                     ) {
-                      buyStationFunction(4, 1120);
+                      buyStationFunction(4, 112);
                     } else {
                       toast.error("¡Puedes activar estaciones en flujo!");
                     }
@@ -306,7 +306,7 @@ const StationCards = (props) => {
                   title="haga clic en la imagen para activarla"
                 />
                 <Button
-                  onClick={() => buyStationFunction(4, 1120)}
+                  onClick={() => buyStationFunction(4, 112)}
                   disabled={
                     startStation === true &&
                     stationOne === true &&
@@ -338,7 +338,7 @@ const StationCards = (props) => {
                       stationThree === true &&
                       stationFour === true
                     ) {
-                      buyStationFunction(5, 2240);
+                      buyStationFunction(5, 224);
                     } else {
                       toast.error("¡Puedes activar estaciones en flujo!");
                     }
@@ -349,7 +349,7 @@ const StationCards = (props) => {
                   title="haga clic en la imagen para activarla"
                 />
                 <Button
-                  onClick={() => buyStationFunction(5, 2240)}
+                  onClick={() => buyStationFunction(5, 224)}
                   disabled={
                     startStation === true &&
                     stationOne === true &&

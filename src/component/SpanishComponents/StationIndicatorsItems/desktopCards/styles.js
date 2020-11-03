@@ -20,12 +20,11 @@ export default makeStyles((theme) => ({
   buyButtonStylingSpanish:{
     position: "absolute",
     top: "69%",
-    // left: "48%",
     right:0,
     transform: "translate(-50%, -50%)",
     fontWeight: "bold",
-    color: "white",
-    // borderRadius: 10,
-    // marginTop:10
+    borderRadius: 10,
+    backgroundColor: "#FFCD36",
+    color:"#A64993"
   }
 }));

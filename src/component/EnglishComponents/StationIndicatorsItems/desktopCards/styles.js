@@ -4,7 +4,7 @@ export default makeStyles((theme) => ({
   imgContainer: {
     textAlign: "center",
     // marginTop:20,
-    position:"relative",
+    position: "relative",
     marginBottom: 30,
   },
   cardMain: {
@@ -17,18 +17,16 @@ export default makeStyles((theme) => ({
     height: "auto",
     margin: "auto",
   },
-  buttonStyling: {
-   
-  },
-  buyButtonStyling:{
+  buttonStyling: {},
+  buyButtonStyling: {
     position: "absolute",
     top: "69%",
-    // left: "48%",
-    right:0,
+    right: 0,
     transform: "translate(-50%, -50%)",
     fontWeight: "bold",
-    color: "white",
-    // borderRadius: 10,
-    // marginTop:10
-  }
+    // color: "white",
+    borderRadius: 10,
+    backgroundColor: "#FFCD36",
+    color:"#A64993"
+  },
 }));

@@ -36,7 +36,7 @@ const FooterItems = (props) => {
               className={classes.resimgs}
               onClick={() =>
                 window.open(
-                  "https://tronscan.org/#/contract/TKnBacw11w3YCqJwPDUGKXHpvPapPTVGAo/code",
+                  "https://tronscan.org/#/contract/TFVV2KwSiLCe6XxiuMNQuYwSw9TETvKM6w/code",
                   "_blank"
                 )
               }
@@ -57,7 +57,7 @@ const FooterItems = (props) => {
               className={classes.imgs}
               onClick={() =>
                 window.open(
-                  "https://tronscan.org/#/contract/TKnBacw11w3YCqJwPDUGKXHpvPapPTVGAo/code",
+                  "https://tronscan.org/#/contract/TFVV2KwSiLCe6XxiuMNQuYwSw9TETvKM6w/code",
                   "_blank"
                 )
               }
@@ -68,7 +68,7 @@ const FooterItems = (props) => {
               src={button2}
               className={classes.imgs}
               onClick={() =>
-                window.open("https://peoplesdreams.epizy.com", "_blank")
+                window.open("http://peoplesdreams.epizy.com", "_blank")
               }
             />
             {/* </Link> */}

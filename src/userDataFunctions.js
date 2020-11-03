@@ -196,55 +196,108 @@ export const getUserData = async (defaultAddress, tronWeb) => {
       await contract
         .topRefferer1()
         .call()
-        .then((val) => {
-          store.dispatch({
-            type: "TOP_REFERRAL_1",
-            payload: tronWeb.address.fromHex(val),
-          });
+        .then(async(val) => {
+          let getVal = tronWeb.address.fromHex(val);
+          await contract
+            .users(getVal)
+            .call()
+            .then((value) => {
+              // console.log("===>", value.referredUsers.toNumber());
+              store.dispatch({
+                type: "TOP_REFERRAL_1_NUMBERS",
+                payload: value.referredUsers.toNumber(),
+              });
+              store.dispatch({
+                type: "TOP_REFERRAL_1",
+                payload: tronWeb.address.fromHex(val),
+              });
+            });
         });
 
       //top2
       await contract
         .topRefferer2()
         .call()
-        .then((val) => {
-          store.dispatch({
-            type: "TOP_REFERRAL_2",
-            payload: tronWeb.address.fromHex(val),
-          });
+        .then(async(val) => {
+          let getVal=tronWeb.address.fromHex(val)
+          await contract
+          .users(getVal)
+          .call()
+          .then((value) => {
+            store.dispatch({
+              type: "TOP_REFERRAL_2_NUMBERS",
+              payload: value.referredUsers.toNumber(),
+            });
+            store.dispatch({
+              type: "TOP_REFERRAL_2",
+              payload: tronWeb.address.fromHex(val),
+            });
+
+          })
         });
 
       //top3
       await contract
         .topRefferer3()
         .call()
-        .then((val) => {
+        .then(async(val) => {
+          let getVal=tronWeb.address.fromHex(val)
+          await contract
+          .users(getVal)
+          .call()
+          .then((value) => {
+            store.dispatch({
+              type: "TOP_REFERRAL_3_NUMBERS",
+              payload: value.referredUsers.toNumber(),
+            });
           store.dispatch({
             type: "TOP_REFERRAL_3",
             payload: tronWeb.address.fromHex(val),
           });
+
+        })
         });
 
       //top4
       await contract
         .topRefferer4()
         .call()
-        .then((val) => {
+        .then(async(val) => {
+          let getVal=tronWeb.address.fromHex(val)
+          await contract
+          .users(getVal)
+          .call()
+          .then((value) => {
+            store.dispatch({
+              type: "TOP_REFERRAL_4_NUMBERS",
+              payload: value.referredUsers.toNumber(),
+            });
           store.dispatch({
             type: "TOP_REFERRAL_4",
             payload: tronWeb.address.fromHex(val),
           });
+        })
         });
 
       //top5
       await contract
         .topRefferer5()
         .call()
-        .then((val) => {
-          store.dispatch({
-            type: "TOP_REFERRAL_5",
-            payload: tronWeb.address.fromHex(val),
-          });
+        .then(async (val) => {
+          let getVal = tronWeb.address.fromHex(val);
+          await contract
+            .users(getVal)
+            .call()
+            .then((value) => {
+              store.dispatch({
+                type: "TOP_REFERRAL_5_NUMBERS",
+                payload: value.referredUsers.toNumber(),
+              });
+              store.dispatch({
+                type: "TOP_REFERRAL_5",
+                payload: tronWeb.address.fromHex(val),
+              });
+            });
         });
     });
 };

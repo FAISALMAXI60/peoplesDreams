@@ -103,7 +103,7 @@ const ReferralLinkItems = (props) => {
                   variant="h6"
                   className={`${classes.title} ${"mycareer-headings"}`}
                 >
-                  Total por referiods
+                  Total por referidos
                 </Typography>
                 <div style={{ display: "flex", alignItems: "center" }}>
                   <img
@@ -120,7 +120,7 @@ const ReferralLinkItems = (props) => {
                   variant="h6"
                   className={`${classes.title} ${"mycareer-headings"}`}
                 >
-                  Recompensa de referiods
+                  Recompensa de referidos
                 </Typography>
                 <div style={{ display: "flex", alignItems: "center" }}>
                   <img
