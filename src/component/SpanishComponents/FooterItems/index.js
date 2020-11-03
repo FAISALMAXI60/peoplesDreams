@@ -32,6 +32,7 @@ const FooterItems = (props) => {
           >
             {/* <Link to="/"> */}
             <img
+              style={{ cursor: "pointer" }}
               src={button1}
               className={classes.resimgs}
               onClick={() =>
@@ -53,6 +54,7 @@ const FooterItems = (props) => {
           <>
             {/* <Link to="/"> */}
             <img
+              style={{ cursor: "pointer" }}
               src={button1}
               className={classes.imgs}
               onClick={() =>
@@ -65,6 +67,7 @@ const FooterItems = (props) => {
             {/* </Link> */}
             {/* <Link to="/"> */}
             <img
+              style={{ cursor: "pointer" }}
               src={button2}
               className={classes.imgs}
               onClick={() =>

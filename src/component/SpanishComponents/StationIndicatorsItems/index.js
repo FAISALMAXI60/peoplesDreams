@@ -44,7 +44,7 @@ const StationIndicatorItems = (props) => {
     <Grid container className={classes.mainContainer}>
       <Grid item xs={12} className={classes.topHeadContainer}>
         <Typography variant="h4" className={classes.title}>
-          CORREDORES POR ESTACIÓN
+          CORREDOR POR ESTACIÓN
         </Typography>
       </Grid>
       <Grid item xs={12} className={classes.indicatorsContainer}>

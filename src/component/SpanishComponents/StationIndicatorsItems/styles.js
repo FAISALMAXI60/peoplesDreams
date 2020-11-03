@@ -67,11 +67,12 @@ export default makeStyles((theme) => ({
     position: "absolute",
     top: "69%",
     fontSize:9,
-    right:80,
+    right:118,
     transform: "translate(-50%, -50%)",
     fontWeight: "bold",
     borderRadius: 10,
     backgroundColor: "#FFCD36",
-    color:"#A64993"
+    color:"#A64993",
+    padding:" 0px 8px !important"
   },
 }));

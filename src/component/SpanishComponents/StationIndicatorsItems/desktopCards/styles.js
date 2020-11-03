@@ -25,6 +25,7 @@ export default makeStyles((theme) => ({
     fontWeight: "bold",
     borderRadius: 10,
     backgroundColor: "#FFCD36",
-    color:"#A64993"
+    color:"#A64993",
+    padding:" 0px 8px !important"
   }
 }));

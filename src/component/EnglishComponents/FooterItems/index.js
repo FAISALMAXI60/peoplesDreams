@@ -31,6 +31,7 @@ const FooterItems = (props) => {
             }}
           >
             <img
+              style={{ cursor: "pointer" }}
               src={button1}
               className={classes.imgs}
               onClick={() =>
@@ -46,6 +47,7 @@ const FooterItems = (props) => {
         ) : (
           <>
             <img
+              style={{ cursor: "pointer" }}
               src={button1}
               className={classes.imgs}
               onClick={() =>
@@ -56,6 +58,7 @@ const FooterItems = (props) => {
               }
             />
             <img
+              style={{ cursor: "pointer" }}
               src={button2}
               className={classes.imgs}
               onClick={() =>

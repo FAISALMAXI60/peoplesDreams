@@ -24,9 +24,9 @@ export default makeStyles((theme) => ({
     right: 0,
     transform: "translate(-50%, -50%)",
     fontWeight: "bold",
-    // color: "white",
     borderRadius: 10,
     backgroundColor: "#FFCD36",
-    color:"#A64993"
+    color: "#A64993",
+    padding: " 0px 8px !important",
   },
 }));
