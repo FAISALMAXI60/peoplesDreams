@@ -1,7 +1,7 @@
 import React from "react";
 import useStyles from "./styles";
 import Grid from "@material-ui/core/Grid";
-import headerLogo from "../../../../assets/headstrong/head mobile version stations.png";
+import headerLogo from "../../../../assets/headstrong/header mobile version registration.png";
 import store from "../../../../redux/store";
 import { useSelector } from "react-redux";
 
