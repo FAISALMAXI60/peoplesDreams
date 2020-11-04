@@ -68,6 +68,12 @@ const MobileIndiCards = (props) => {
     indicatorFour,
     finishIndicator,
     randomAuth,
+    paymentForStart,
+    paymentForOne,
+    paymentForTwo,
+    paymentForThree,
+    paymentForFour,
+    paymentForFive,
   } = useSelector((state) => ({
     startStation: state.UserReducer.startStation,
     stationOne: state.UserReducer.stationOne,
@@ -82,6 +88,12 @@ const MobileIndiCards = (props) => {
     indicatorFour: state.UserReducer.indicatorFour,
     finishIndicator: state.UserReducer.finishIndicator,
     randomAuth: state.UserReducer.randomAuth,
+    paymentForStart: state.UserReducer.paymentForStart,
+    paymentForOne: state.UserReducer.paymentForOne,
+    paymentForTwo: state.UserReducer.paymentForTwo,
+    paymentForThree: state.UserReducer.paymentForThree,
+    paymentForFour: state.UserReducer.paymentForFour,
+    paymentForFive: state.UserReducer.paymentForFive,
   }));
 
   const buyStationOne = async () => {
@@ -119,474 +131,295 @@ const MobileIndiCards = (props) => {
 
   return (
     <Grid container className={classes.main}>
-      {randomAuth ? (
-        <>
-          <Grid item xs={12}>
-            <div className={classes.mainCont}>
-              {startStation ? (
-                <img src={startActive} className={classes.cards} />
-              ) : (
-                <img src={start} className={classes.cards} />
-              )}
-              <div className={classes.indicator}>
-                <span
-                  style={{
-                    display: "flex",
-                    justifyContent: "center",
-                    alignItems: "center",
-                    height: "100%",
-                    fontWeight: "bold",
-                    fontSize: 22,
-                    color: "white",
-                  }}
-                >
-                  {startIndicator ? startIndicator : 0}
-                </span>
-              </div>
+      <Grid item xs={12}>
+        <div style={{ position: "relative", textAlign: "center" }}>
+          <div className={classes.mainCont}>
+            {startStation && paymentForStart >= 3 ? (
+              <img src={startActive} className={classes.cards} />
+            ) : (
+              <img
+                src={start}
+                className={classes.cards}
+                title="click on the image to active it"
+                style={{ cursor: "pointer", marginBottom: 10 }}
+              />
+            )}
+            <div className={classes.indicator}>
+              <span
+                style={{
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  height: "100%",
+                  fontWeight: "bold",
+                  fontSize: 22,
+                  color: "white",
+                }}
+              >
+                {startIndicator ? startIndicator : 0}
+              </span>
             </div>
-            <div className={classes.mainCont}>
-              {stationOne ? (
-                <img src={stationActive1} className={classes.cards} />
-              ) : (
-                <img src={station1} className={classes.cards} />
-              )}
-              <div className={classes.indicator}>
-                <span
-                  style={{
-                    display: "flex",
-                    justifyContent: "center",
-                    alignItems: "center",
-                    height: "100%",
-                    fontWeight: "bold",
-                    fontSize: 22,
-                    color: "white",
-                  }}
-                >
-                  {indicatorOne ? indicatorOne : 0}
-                </span>
-              </div>
+          </div>
+          {startStation ? (
+            <div style={{ marginTop: 10, marginBottom: 10 }} />
+          ) : (
+            <Button
+              disabled={paymentForStart >= 3 ? false : true}
+              variant="contained"
+              color="primary"
+              className={classes.buyButtonStyling2}
+              onClick={buyStationOne}
+            >
+              COMPRA/BUY
+            </Button>
+          )}
+        </div>
+        <div style={{ position: "relative", textAlign: "center" }}>
+          <div className={classes.mainCont}>
+            {stationOne && paymentForOne >= 3 ? (
+              <img src={stationActive1} className={classes.cards} />
+            ) : (
+              <img
+                src={station1}
+                className={classes.cards}
+                style={{ cursor: "pointer", marginBottom: 10 }}
+                title="click on the image to active it"
+              />
+            )}
+            <div className={classes.indicator}>
+              <span
+                style={{
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  height: "100%",
+                  fontWeight: "bold",
+                  fontSize: 22,
+                  color: "white",
+                }}
+              >
+                {indicatorOne ? indicatorOne : 0}
+              </span>
             </div>
-            <div className={classes.mainCont}>
-              {stationTwo ? (
-                <img src={stationActive2} className={classes.cards} />
-              ) : (
-                <img src={station2} className={classes.cards} />
-              )}
-              <div className={classes.indicator}>
-                <span
-                  style={{
-                    display: "flex",
-                    justifyContent: "center",
-                    alignItems: "center",
-                    height: "100%",
-                    fontWeight: "bold",
-                    fontSize: 22,
-                    color: "white",
-                  }}
-                >
-                  {indicatorTwo ? indicatorTwo : 0}
-                </span>
-              </div>
+          </div>
+          {stationOne ? (
+            <div style={{ marginTop: 10, marginBottom: 10 }} />
+          ) : (
+            <Button
+              onClick={() => buyStationFunction(1, 14)}
+              disabled={
+                (stationOne === true && paymentForOne < 3) ||
+                startStation === false
+                  ? true
+                  : false
+              }
+              variant="contained"
+              color="primary"
+              className={classes.buyButtonStylingSpan2}
+            >
+              COMPRA/BUY
+            </Button>
+          )}
+        </div>
+        <div style={{ position: "relative", textAlign: "center" }}>
+          <div className={classes.mainCont}>
+            {stationTwo && paymentForTwo >= 3 ? (
+              <img src={stationActive2} className={classes.cards} />
+            ) : (
+              <img
+                src={station2}
+                className={classes.cards}
+                style={{ cursor: "pointer", marginBottom: 10 }}
+                title="click on the image to active it"
+              />
+            )}
+            <div className={classes.indicator}>
+              <span
+                style={{
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  height: "100%",
+                  fontWeight: "bold",
+                  fontSize: 22,
+                  color: "white",
+                }}
+              >
+                {indicatorTwo ? indicatorTwo : 0}
+              </span>
             </div>
-            <div className={classes.mainCont}>
-              {stationThree ? (
-                <img src={stationActive3} className={classes.cards} />
-              ) : (
-                <img src={station3} className={classes.cards} />
-              )}
-              <div className={classes.indicator}>
-                <span
-                  style={{
-                    display: "flex",
-                    justifyContent: "center",
-                    alignItems: "center",
-                    height: "100%",
-                    fontWeight: "bold",
-                    fontSize: 22,
-                    color: "white",
-                  }}
-                >
-                  {indicatorThree ? indicatorThree : 0}
-                </span>
-              </div>
+          </div>
+          {stationTwo ? (
+            <div style={{ marginTop: 10, marginBottom: 10 }} />
+          ) : (
+            <Button
+              disabled={
+                (stationTwo === true && paymentForTwo < 3) ||
+                startStation === false ||
+                stationOne === false
+                  ? true
+                  : false
+              }
+              onClick={() => buyStationFunction(2, 28)}
+              variant="contained"
+              color="primary"
+              className={classes.buyButtonStylingSpan2}
+            >
+              COMPRA/BUY
+            </Button>
+          )}
+        </div>
+        <div style={{ position: "relative", textAlign: "center" }}>
+          <div className={classes.mainCont}>
+            {stationThree && paymentForThree >= 3 ? (
+              <img src={stationActive3} className={classes.cards} />
+            ) : (
+              <img
+                src={station3}
+                className={classes.cards}
+                style={{ cursor: "pointer", marginBottom: 10 }}
+                title="click on the image to active it"
+              />
+            )}
+            <div className={classes.indicator}>
+              <span
+                style={{
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  height: "100%",
+                  fontWeight: "bold",
+                  fontSize: 22,
+                  color: "white",
+                }}
+              >
+                {indicatorThree ? indicatorThree : 0}
+              </span>
             </div>
-            <div className={classes.mainCont}>
-              {stationFour ? (
-                <img src={stationActive4} className={classes.cards} />
-              ) : (
-                <img src={station4} className={classes.cards} />
-              )}
-              <div className={classes.indicator}>
-                <span
-                  style={{
-                    display: "flex",
-                    justifyContent: "center",
-                    alignItems: "center",
-                    height: "100%",
-                    fontWeight: "bold",
-                    fontSize: 22,
-                    color: "white",
-                  }}
-                >
-                  {indicatorFour ? indicatorFour : 0}
-                </span>
-              </div>
+          </div>
+          {stationThree ? (
+            <div style={{ marginTop: 10, marginBottom: 10 }} />
+          ) : (
+            <Button
+              onClick={() => buyStationFunction(3, 56)}
+              disabled={
+                (stationThree === true && paymentForThree < 3) ||
+                startStation === false ||
+                stationOne === false ||
+                stationTwo === false
+                  ? true
+                  : false
+              }
+              variant="contained"
+              color="primary"
+              className={classes.buyButtonStylingSpan2}
+            >
+              COMPRA/BUY
+            </Button>
+          )}
+        </div>
+        <div style={{ position: "relative", textAlign: "center" }}>
+          <div className={classes.mainCont}>
+            {stationFour && paymentForFour >= 3 ? (
+              <img src={stationActive4} className={classes.cards} />
+            ) : (
+              <img
+                src={station4}
+                className={classes.cards}
+                style={{ cursor: "pointer", marginBottom: 10 }}
+                title="click on the image to active it"
+              />
+            )}
+            <div className={classes.indicator}>
+              <span
+                style={{
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  height: "100%",
+                  fontWeight: "bold",
+                  fontSize: 22,
+                  color: "white",
+                }}
+              >
+                {indicatorFour ? indicatorFour : 0}
+              </span>
             </div>
-            <div className={classes.mainCont}>
-              {finishStation ? (
-                <img src={finishActive} className={classes.cards} />
-              ) : (
-                <img src={finish} className={classes.cards} />
-              )}
-              <div className={classes.indicator}>
-                <span
-                  style={{
-                    display: "flex",
-                    justifyContent: "center",
-                    alignItems: "center",
-                    height: "100%",
-                    fontWeight: "bold",
-                    fontSize: 22,
-                    color: "white",
-                  }}
-                >
-                  {finishIndicator ? finishIndicator : 0}
-                </span>
-              </div>
+          </div>
+          {stationFour ? (
+            <div style={{ marginTop: 10, marginBottom: 10 }} />
+          ) : (
+            <Button
+              onClick={() => buyStationFunction(4, 112)}
+              disabled={
+                (stationFour === true && paymentForFour < 3) ||
+                startStation === false ||
+                stationOne === false ||
+                stationTwo === false ||
+                stationThree === false
+                  ? true
+                  : false
+              }
+              variant="contained"
+              color="primary"
+              className={classes.buyButtonStylingSpan2}
+            >
+              COMPRA/BUY
+            </Button>
+          )}
+        </div>
+        <div style={{ position: "relative", textAlign: "center" }}>
+          <div className={classes.mainCont}>
+            {finishStation && paymentForFive >= 3 ? (
+              <img src={finishActive} className={classes.cards} />
+            ) : (
+              <img
+                src={finish}
+                className={classes.cards}
+                style={{ cursor: "pointer", marginBottom: 10 }}
+                title="click on the image to active it"
+              />
+            )}
+            <div className={classes.indicator}>
+              <span
+                style={{
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  height: "100%",
+                  fontWeight: "bold",
+                  fontSize: 22,
+                  color: "white",
+                }}
+              >
+                {finishIndicator ? finishIndicator : 0}
+              </span>
             </div>
-          </Grid>
-        </>
-      ) : (
-        <>
-          <Grid item xs={12}>
-            <div style={{ position: "relative", textAlign: "center" }}>
-              <div className={classes.mainCont}>
-                {startStation ? (
-                  <img src={startActive} className={classes.cards} />
-                ) : (
-                  <img
-                    src={start}
-                    className={classes.cards}
-                    title="haga clic en la imagen para activarla"
-                    style={{ cursor: "pointer",marginBottom:10 }}
-                    onClick={buyStationOne}
-                  />
-                )}
-                <div className={classes.indicator}>
-                  <span
-                    style={{
-                      display: "flex",
-                      justifyContent: "center",
-                      alignItems: "center",
-                      height: "100%",
-                      fontWeight: "bold",
-                      fontSize: 22,
-                      color: "white",
-                    }}
-                  >
-                    {startIndicator ? startIndicator : 0}
-                  </span>
-                </div>
-              </div>
-              {startStation ? (
-                <div style={{ marginTop: 10, marginBottom: 10 }} />
-              ) : (
-                <Button
-                  variant="contained"
-                  color="primary"
-                  className={classes.buyButtonStylingSpan2}
-                  onClick={buyStationOne}
-                >
-                  COMPRA/BUY
-                </Button>
-              )}
-            </div>
-            <div style={{ position: "relative", textAlign: "center" }}>
-              <div className={classes.mainCont}>
-                {stationOne ? (
-                  <img src={stationActive1} className={classes.cards} />
-                ) : (
-                  <img
-                    onClick={() => {
-                      if (startStation === true) {
-                        buyStationFunction(1, 14);
-                      } else {
-                        toast.error("¡Primero compre la estación de inicio!");
-                      }
-                    }}
-                    src={station1}
-                    className={classes.cards}
-                    style={{ cursor: "pointer",marginBottom:10 }}
-                    title="haga clic en la imagen para activarla"
-                  />
-                )}
-                <div className={classes.indicator}>
-                  <span
-                    style={{
-                      display: "flex",
-                      justifyContent: "center",
-                      alignItems: "center",
-                      height: "100%",
-                      fontWeight: "bold",
-                      fontSize: 22,
-                      color: "white",
-                    }}
-                  >
-                    {indicatorOne ? indicatorOne : 0}
-                  </span>
-                </div>
-              </div>
-              {stationOne ? (
-                <div style={{ marginTop: 10, marginBottom: 10 }} />
-              ) : (
-                <Button
-                  onClick={() => buyStationFunction(1, 14)}
-                  disabled={startStation === true ? false : true}
-                  variant="contained"
-                  color="primary"
-                  className={classes.buyButtonStylingSpan2}
-                >
-                  COMPRA/BUY
-                </Button>
-              )}
-            </div>
-            <div style={{ position: "relative", textAlign: "center" }}>
-              <div className={classes.mainCont}>
-                {stationTwo ? (
-                  <img src={stationActive2} className={classes.cards} />
-                ) : (
-                  <img
-                    onClick={() => {
-                      if (startStation === true && stationOne === true) {
-                        buyStationFunction(2, 28);
-                      } else {
-                        toast.error("¡Puedes activar estaciones en flujo!");
-                      }
-                    }}
-                    src={station2}
-                    className={classes.cards}
-                    style={{ cursor: "pointer",marginBottom:10 }}
-                    title="haga clic en la imagen para activarla"
-                  />
-                )}
-                <div className={classes.indicator}>
-                  <span
-                    style={{
-                      display: "flex",
-                      justifyContent: "center",
-                      alignItems: "center",
-                      height: "100%",
-                      fontWeight: "bold",
-                      fontSize: 22,
-                      color: "white",
-                    }}
-                  >
-                    {indicatorTwo ? indicatorTwo : 0}
-                  </span>
-                </div>
-              </div>
-              {stationTwo ? (
-                <div style={{ marginTop: 10, marginBottom: 10 }} />
-              ) : (
-                <Button
-                  disabled={
-                    startStation === true && stationOne === true ? false : true
-                  }
-                  onClick={() => buyStationFunction(2, 28)}
-                  variant="contained"
-                  color="primary"
-                  className={classes.buyButtonStylingSpan2}
-                >
-                  COMPRA/BUY
-                </Button>
-              )}
-            </div>
-            <div style={{ position: "relative", textAlign: "center" }}>
-              <div className={classes.mainCont}>
-                {stationThree ? (
-                  <img src={stationActive3} className={classes.cards} />
-                ) : (
-                  <img
-                    onClick={() => {
-                      if (
-                        startStation === true &&
-                        stationOne === true &&
-                        stationTwo === true
-                      ) {
-                        buyStationFunction(3, 56);
-                      } else {
-                        toast.error("¡Puedes activar estaciones en flujo!");
-                      }
-                    }}
-                    src={station3}
-                    className={classes.cards}
-                    style={{ cursor: "pointer",marginBottom:10 }}
-                    title="haga clic en la imagen para activarla"
-                  />
-                )}
-                <div className={classes.indicator}>
-                  <span
-                    style={{
-                      display: "flex",
-                      justifyContent: "center",
-                      alignItems: "center",
-                      height: "100%",
-                      fontWeight: "bold",
-                      fontSize: 22,
-                      color: "white",
-                    }}
-                  >
-                    {indicatorThree ? indicatorThree : 0}
-                  </span>
-                </div>
-              </div>
-              {stationThree ? (
-                <div style={{ marginTop: 10, marginBottom: 10 }} />
-              ) : (
-                <Button
-                  onClick={() => buyStationFunction(3, 56)}
-                  disabled={
-                    startStation === true &&
-                    stationOne === true &&
-                    stationTwo === true
-                      ? false
-                      : true
-                  }
-                  variant="contained"
-                  color="primary"
-                  className={classes.buyButtonStylingSpan2}
-                >
-                  COMPRA/BUY
-                </Button>
-              )}
-            </div>
-            <div style={{ position: "relative", textAlign: "center" }}>
-              <div className={classes.mainCont}>
-                {stationFour ? (
-                  <img src={stationActive4} className={classes.cards} />
-                ) : (
-                  <img
-                    onClick={() => {
-                      if (
-                        startStation === true &&
-                        stationOne === true &&
-                        stationTwo === true &&
-                        stationThree === true
-                      ) {
-                        buyStationFunction(4, 112);
-                      } else {
-                        toast.error("¡Puedes activar estaciones en flujo!");
-                      }
-                    }}
-                    src={station4}
-                    className={classes.cards}
-                    style={{ cursor: "pointer",marginBottom:10 }}
-                    title="haga clic en la imagen para activarla"
-                  />
-                )}
-                <div className={classes.indicator}>
-                  <span
-                    style={{
-                      display: "flex",
-                      justifyContent: "center",
-                      alignItems: "center",
-                      height: "100%",
-                      fontWeight: "bold",
-                      fontSize: 22,
-                      color: "white",
-                    }}
-                  >
-                    {indicatorFour ? indicatorFour : 0}
-                  </span>
-                </div>
-              </div>
-              {stationFour ? (
-                <div style={{ marginTop: 10, marginBottom: 10 }} />
-              ) : (
-                <Button
-                  onClick={() => buyStationFunction(4, 112)}
-                  disabled={
-                    startStation === true &&
-                    stationOne === true &&
-                    stationTwo === true &&
-                    stationThree === true
-                      ? false
-                      : true
-                  }
-                  variant="contained"
-                  color="primary"
-                  className={classes.buyButtonStylingSpan2}
-                >
-                  COMPRA/BUY
-                </Button>
-              )}
-            </div>
-            <div style={{ position: "relative", textAlign: "center" }}>
-              <div className={classes.mainCont}>
-                {finishStation ? (
-                  <img src={finishActive} className={classes.cards} />
-                ) : (
-                  <img
-                    onClick={() => {
-                      if (
-                        startStation === true &&
-                        stationOne === true &&
-                        stationTwo === true &&
-                        stationThree === true &&
-                        stationFour === true
-                      ) {
-                        buyStationFunction(5, 224);
-                      } else {
-                        toast.error("¡Puedes activar estaciones en flujo!");
-                      }
-                    }}
-                    src={finish}
-                    className={classes.cards}
-                    style={{ cursor: "pointer",marginBottom:10 }}
-                    title="haga clic en la imagen para activarla"
-                  />
-                )}
-                <div className={classes.indicator}>
-                  <span
-                    style={{
-                      display: "flex",
-                      justifyContent: "center",
-                      alignItems: "center",
-                      height: "100%",
-                      fontWeight: "bold",
-                      fontSize: 22,
-                      color: "white",
-                    }}
-                  >
-                    {finishIndicator ? finishIndicator : 0}
-                  </span>
-                </div>
-              </div>
-              {finishStation ? (
-                <div style={{ marginTop: 10, marginBottom: 10 }} />
-              ) : (
-                <Button
-                  onClick={() => buyStationFunction(5, 224)}
-                  disabled={
-                    startStation === true &&
-                    stationOne === true &&
-                    stationTwo === true &&
-                    stationThree === true &&
-                    stationFour === true
-                      ? false
-                      : true
-                  }
-                  variant="contained"
-                  color="primary"
-                  className={classes.buyButtonStylingSpan2}
-                >
-                  COMPRA/BUY
-                </Button>
-              )}
-            </div>
-          </Grid>
-        </>
-      )}
+          </div>
+          {finishStation ? (
+            <div style={{ marginTop: 10, marginBottom: 10 }} />
+          ) : (
+            <Button
+              onClick={() => buyStationFunction(5, 224)}
+              disabled={
+                (finishStation === true && paymentForFive < 3) ||
+                startStation === false ||
+                stationOne === false ||
+                stationTwo === false ||
+                stationThree === false ||
+                stationFour === false
+                  ? true
+                  : false
+              }
+              variant="contained"
+              color="primary"
+              className={classes.buyButtonStylingSpan2}
+            >
+              COMPRA/BUY
+            </Button>
+          )}
+        </div>
+      </Grid>
     </Grid>
   );
 };

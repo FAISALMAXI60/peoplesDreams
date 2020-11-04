@@ -66,7 +66,7 @@ export default makeStyles((theme) => ({
     // margin:"auto",
     // width:"50%"
   },
-  buyButtonStyling2: {
+  buyButtonStyling2ForMobile: {
     position: "absolute",
     top: "69%",
     fontSize:9,

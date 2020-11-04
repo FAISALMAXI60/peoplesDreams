@@ -45,11 +45,56 @@ let initState = {
 
   //user ref id
   userRefId: "",
+
+  //payment received
+  paymentForStart: "",
+  paymentForOne: "",
+  paymentForTwo: "",
+  paymentForThree: "",
+  paymentForFour: "",
+  paymentForFive: "",
 };
 
 export const UserReducer = (state = initState, action) => {
   const { type, payload } = action;
   switch (type) {
+    //check payments
+    case "CHECK_RECIVED_PAYMENT_FOR_START":
+      return {
+        ...state,
+        paymentForStart: payload,
+      };
+
+    case "CHECK_RECIVED_PAYMENT_FOR_ONE":
+      return {
+        ...state,
+        paymentForOne: payload,
+      };
+
+    case "CHECK_RECIVED_PAYMENT_FOR_TWO":
+      return {
+        ...state,
+        paymentForTwo: payload,
+      };
+
+    case "CHECK_RECIVED_PAYMENT_FOR_THREE":
+      return {
+        ...state,
+        paymentForThree: payload,
+      };
+
+    case "CHECK_RECIVED_PAYMENT_FOR_FOUR":
+      return {
+        ...state,
+        paymentForFour: payload,
+      };
+
+    case "CHECK_RECIVED_PAYMENT_FOR_FIVE":
+      return {
+        ...state,
+        paymentForFive: payload,
+      };
+
     //top referral numbers
     case "TOP_REFERRAL_1_NUMBERS":
       return {

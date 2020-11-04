@@ -19,7 +19,7 @@ export default makeStyles((theme) => ({
   },
   buyButtonStylingSpanish:{
     position: "absolute",
-    top: "69%",
+    top: "73%",
     right:0,
     transform: "translate(-50%, -50%)",
     fontWeight: "bold",
