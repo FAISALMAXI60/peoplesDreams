@@ -1,10 +1,10 @@
 import React from "react";
 import useStyles from "./styles";
 import Grid from "@material-ui/core/Grid";
-import headerLogo from "../../../../assets/headstrong/header mobile version registration.png";
+import headerLogo from "../../../../assets/fondo.png";
 import store from "../../../../redux/store";
 import { useSelector } from "react-redux";
-
+import logo from '../../../../assets/logo blanco.png'
 /**
  * @author
  * @function MobileHeader
@@ -32,7 +32,7 @@ const MobileHeader = (props) => {
           style={{
             position: "absolute",
             right: 15,
-            top:10,
+            top: 10,
             // bottom: 15,
             fontWeight: "bold",
             color: "white",
@@ -44,7 +44,19 @@ const MobileHeader = (props) => {
           {getLan === "#en" ? "Log Out" : "cerrar sesión"}
         </span>
       ) : null}
-      <img src={headerLogo} className={classes.logo} />
+      <div style={{ position: "relative", display: "inline" }}>
+        <img
+          src={logo}
+          style={{
+            width: "100%",
+            position: "absolute",
+            top: "50%",
+            left: "50%",
+            transform: "translate(-50%, -50%)",
+          }}
+        />
+        <img src={headerLogo} className={classes.logo} />
+      </div>
     </Grid>
   );
 };
