@@ -159,7 +159,7 @@ const StationCards = (props) => {
               title="click on the image to active it"
             />
             <Button
-              onClick={() => buyStationFunction(1, 14)}
+              onClick={() => buyStationFunction(1, 140)}
               disabled={
                 (stationOne === true && paymentForOne < 3) ||
                 startStation === false
@@ -187,7 +187,7 @@ const StationCards = (props) => {
               title="click on the image to active it"
             />
             <Button
-              onClick={() => buyStationFunction(2, 28)}
+              onClick={() => buyStationFunction(2, 280)}
               disabled={
                 (stationTwo === true && paymentForTwo < 3) ||
                 startStation === false ||
@@ -217,7 +217,7 @@ const StationCards = (props) => {
             />
             <Button
               className={classes.buyButtonStyling}
-              onClick={() => buyStationFunction(3, 56)}
+              onClick={() => buyStationFunction(3, 560)}
               disabled={
                 (stationThree === true && paymentForThree < 3) ||
                 startStation === false ||
@@ -247,7 +247,7 @@ const StationCards = (props) => {
             />
 
             <Button
-              onClick={() => buyStationFunction(4, 112)}
+              onClick={() => buyStationFunction(4, 1120)}
               disabled={
                 (stationFour === true && paymentForFour < 3) ||
                 startStation === false ||
@@ -278,7 +278,7 @@ const StationCards = (props) => {
               title="click on the image to active it"
             />
             <Button
-              onClick={() => buyStationFunction(5, 224)}
+              onClick={() => buyStationFunction(5, 2240)}
               disabled={
                 (finishStation === true && paymentForFive < 3) ||
                 startStation === false ||

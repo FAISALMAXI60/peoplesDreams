@@ -160,7 +160,7 @@ const SpanishAuth = ({ setSelectedLang }) => {
                   .buyStartStation(trxID)
                   .send({
                     feeLimit: 100_000_000,
-                    callValue: tronWeb.toSun(15),
+                    callValue: tronWeb.toSun(150),
                   })
                   .then((value) => {
                     getUserData(tronWeb.defaultAddress.base58, tronWeb).then(

@@ -16,7 +16,7 @@
 //test net
 export const environment = {
   production: true,
-  baseUrl: "http://localhost:4200/",
+  baseUrl: "http://localhost:4200/",  
   nodeName1: "Shasta Testnet",
   nodeName2: "Shasta Testnet",
   fullnode: "https://api.shasta.trongrid.io",
@@ -26,7 +26,13 @@ export const environment = {
   defaultRefAddress: "TKACovBPFcAiyzwJprjY96fc4fo8wJs1Kv",
   // contractAddress: 'THzXYenoaiap47c1kNLh9hrNcjziZo2FNu',
   telegramLink: "https://t.me/tronbrun",
-  contractAddress: "TDWxckBa8QXuWQ3jV22yuQqodhHF6w2gSJ",
+  contractAddress: "TAYDdhwmwb7CGrYh6Q9Dg7VswYvrwEbDTP",
   contractLink:
-    "https://shasta.tronscan.org/#/contract/TDWxckBa8QXuWQ3jV22yuQqodhHF6w2gSJ/code",
+    "https://shasta.tronscan.org/#/contract/TAYDdhwmwb7CGrYh6Q9Dg7VswYvrwEbDTP/code",
 };
+
+
+
+//new one
+
+// https://shasta.tronscan.org/#/contract/TAYDdhwmwb7CGrYh6Q9Dg7VswYvrwEbDTP/code
