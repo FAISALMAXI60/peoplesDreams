@@ -217,7 +217,7 @@ export const getUserData = async (defaultAddress, tronWeb) => {
 
       //top1
       await contract
-        .arr(0)
+        .arr(4)
         .call()
         .then(async (val) => {
           let getVal = tronWeb.address.fromHex(val);
@@ -239,7 +239,7 @@ export const getUserData = async (defaultAddress, tronWeb) => {
 
       //top2
       await contract
-        .arr(1)
+        .arr(3)
         .call()
         .then(async (val) => {
           let getVal = tronWeb.address.fromHex(val);
@@ -281,7 +281,7 @@ export const getUserData = async (defaultAddress, tronWeb) => {
 
       //top4
       await contract
-        .arr(3)
+        .arr(1)
         .call()
         .then(async (val) => {
           let getVal = tronWeb.address.fromHex(val);
@@ -302,7 +302,7 @@ export const getUserData = async (defaultAddress, tronWeb) => {
 
       //top5
       await contract
-        .arr(4)
+        .arr(0)
         .call()
         .then(async (val) => {
           let getVal = tronWeb.address.fromHex(val);
