@@ -84,6 +84,8 @@ const Carousel = (props) => {
       state.UserReducer.topFiveReferralsFromFirebase,
   }));
 
+  // console.log("===========================>", topFiveReferralsFromFirebase);
+
   return (
     <>
       <Slider {...settings}>

@@ -135,9 +135,10 @@ const EnglishAuth = ({ setSelectedLang }) => {
                             dispatch(
                               saveUser(val.referredUsers.toNumber(), getId)
                             );
-                          });
-                      }).then(()=>{
-                        dispatch(getTopFiveReferrals());
+                          })
+                          // .then(() => {
+                          //   dispatch(getTopFiveReferrals());
+                          // });
                       })
                   })
                   .catch(() => {

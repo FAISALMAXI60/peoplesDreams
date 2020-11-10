@@ -26,9 +26,14 @@ export const saveUser = (referrals, address) => async (dispatch) => {
         });
         if (getId) {
           // console.log("here is the id====>", getId);
-          db.collection("users").doc(getId).update({
-            totalReferrals: referrals,
-          });
+          db.collection("users")
+            .doc(getId)
+            .update({
+              totalReferrals: referrals,
+            })
+            .then(() => {
+              dispatch(getTopFiveReferrals());
+            });
         } else {
           db.collection("users")
             .add({
@@ -36,7 +41,7 @@ export const saveUser = (referrals, address) => async (dispatch) => {
               address: address,
             })
             .then(() => {
-              alert("successfully added");
+              dispatch(getTopFiveReferrals());
             });
         }
       }
@@ -44,6 +49,7 @@ export const saveUser = (referrals, address) => async (dispatch) => {
 };
 
 export const getTopFiveReferrals = () => async (dispatch) => {
+  // console.log("yes called well======================================>")
   db.collection("users")
     .get()
     .then(function (querySnapshot) {
@@ -51,12 +57,14 @@ export const getTopFiveReferrals = () => async (dispatch) => {
       querySnapshot.forEach(function (doc) {
         storeUser.push({ docId: doc.id, ...doc.data() });
       });
+      // console.log("===>", storeUser);
+
       let finalData = storeUser.sort(
         (a, b) => parseFloat(b.totalReferrals) - parseFloat(a.totalReferrals)
       );
       dispatch({
         type: "STORE_TOP_FIVE_REFERRALS",
-        payload: finalData.slice(0, 4),
+        payload: finalData.slice(0, 5),
       });
     });
 };
