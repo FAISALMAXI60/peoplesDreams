@@ -16,11 +16,14 @@ import { getUserData } from "../userDataFunctions";
 import { BrowserRouter as Router, Route, Redirect } from "react-router-dom";
 
 //
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 
 //
 import TronHelper from "../utils/TronHelper";
 import { toast } from "react-toastify";
+
+//
+import { getTopFiveReferrals } from "../redux/actions";
 
 /**
  * @author
@@ -72,6 +75,8 @@ const AuthRouteSpan = ({ component: Component, authUser, ...rest }) => (
 const MainApp = (props) => {
   const [selectedLang, setSelectedLang] = useState("#en");
   const [tronWeb, setTronWeb] = useState();
+  const dispatch = useDispatch();
+
   useEffect(() => {
     const tronLoader = setInterval(() => {
       if (window.tronWeb && window.tronWeb.ready) {
@@ -119,7 +124,10 @@ const MainApp = (props) => {
           store.dispatch({
             type: "ALL_AUTHENTICATED",
           });
-        });
+        }).then(()=>{
+          dispatch(getTopFiveReferrals());
+        })
+        
         // console.log("error is here====>");
       } else if (!getWalletSession && !getWalletAddress) {
         console.log("came here");

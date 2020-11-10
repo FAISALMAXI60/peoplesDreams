@@ -53,11 +53,20 @@ let initState = {
   paymentForThree: "",
   paymentForFour: "",
   paymentForFive: "",
+
+  //top five referral from firebase
+  topFiveReferralsFromFirebase: [],
 };
 
 export const UserReducer = (state = initState, action) => {
   const { type, payload } = action;
   switch (type) {
+    //top five referreals from firebase
+    case "STORE_TOP_FIVE_REFERRALS":
+      return {
+        ...state,
+        topFiveReferralsFromFirebase: payload,
+      };
     //check payments
     case "CHECK_RECIVED_PAYMENT_FOR_START":
       return {

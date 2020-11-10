@@ -11,9 +11,10 @@ import { toast } from "react-toastify";
 import { environment } from "../../../environment";
 import { getUserData } from "../../../userDataFunctions";
 import Loader from "react-loader-spinner";
+import { saveUser, getTopFiveReferrals } from "../../../redux/actions";
 
 //
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 
 //
 import TronHelper from "../../../utils/TronHelper";
@@ -28,6 +29,8 @@ import { uuid } from "uuidv4";
 
 const EnglishAuth = ({ setSelectedLang }) => {
   const history = useHistory();
+  const dispatch = useDispatch();
+
   let getRef = localStorage.getItem("peoplesDreamsRefAddress");
 
   const [tronWeb, setTronWeb] = React.useState();
@@ -106,8 +109,8 @@ const EnglishAuth = ({ setSelectedLang }) => {
                     callValue: tronWeb.toSun(150),
                   })
                   .then((value) => {
-                    getUserData(tronWeb.defaultAddress.base58, tronWeb).then(
-                      () => {
+                    getUserData(tronWeb.defaultAddress.base58, tronWeb)
+                      .then(() => {
                         localStorage.setItem(
                           "_peoplesdreams_user_session_byId",
                           uuid()
@@ -122,8 +125,20 @@ const EnglishAuth = ({ setSelectedLang }) => {
                           type: "YES_AUTHENTICATED",
                         });
                         localStorage.setItem("loadingById", "false");
-                      }
-                    );
+                      })
+                      .then(async () => {
+                        let getId = trxID;
+                        await getContract
+                          .users(getId)
+                          .call()
+                          .then((val) => {
+                            dispatch(
+                              saveUser(val.referredUsers.toNumber(), getId)
+                            );
+                          });
+                      }).then(()=>{
+                        dispatch(getTopFiveReferrals());
+                      })
                   })
                   .catch(() => {
                     localStorage.setItem("loadingById", "false");

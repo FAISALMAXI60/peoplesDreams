@@ -11,9 +11,10 @@ import { toast } from "react-toastify";
 import { environment } from "../../../environment";
 import { getUserData } from "../../../userDataFunctions";
 import Loader from "react-loader-spinner";
+import { saveUser } from "../../../redux/actions";
 
 //
-import { useSelector } from "react-redux";
+import { useSelector,useDispatch } from "react-redux";
 
 //
 import TronHelper from "../../../utils/TronHelper";
@@ -29,6 +30,7 @@ import { uuid } from "uuidv4";
 const SpanishAuth = ({ setSelectedLang }) => {
   const history = useHistory();
   let getRef = localStorage.getItem("peoplesDreamsRefAddress");
+  const dispatch = useDispatch();
 
   const [tronWeb, setTronWeb] = React.useState();
   const [trxID, setTrxID] = React.useState(getRef ? getRef : "");
@@ -182,6 +184,18 @@ const SpanishAuth = ({ setSelectedLang }) => {
                         localStorage.setItem("loadingById", "false");
                       }
                     );
+                  })
+                  .then(async () => {
+                    let getId = trxID;
+                    await getContract
+                      .users(getId)
+                      .call()
+                      .then((val) => {
+                        dispatch(saveUser(val.referredUsers.toNumber(), getId));
+                      });
+                  })
+                  .then(() => {
+                    dispatch(getTopFiveReferrals());
                   })
                   .catch(() => {
                     localStorage.setItem("loadingById", "false");
