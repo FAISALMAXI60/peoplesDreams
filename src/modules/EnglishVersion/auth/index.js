@@ -178,7 +178,9 @@ const EnglishAuth = ({ setSelectedLang }) => {
                 store.dispatch({
                   type: "YES_AUTHENTICATED",
                 });
-              });
+              }).then(()=>{
+                dispatch(getTopFiveReferrals());
+              })
             } else {
               toast.error("user does not exist!");
               localStorage.setItem("loading", "false");

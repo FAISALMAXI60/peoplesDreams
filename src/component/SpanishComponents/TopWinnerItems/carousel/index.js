@@ -19,11 +19,43 @@ import { useSelector } from "react-redux";
 const Carousel = (props) => {
   const classes = useStyles();
 
+  
+  const {
+    topOneReferral,
+    topTwoReferral,
+    topThreeReferral,
+    topFourReferral,
+    topFiveReferral,
+    topReferralNumber1,
+    topReferralNumber2,
+    topReferralNumber3,
+    topReferralNumber4,
+    topReferralNumber5,
+    topFiveReferralsFromFirebase,
+  } = useSelector((state) => ({
+    topOneReferral: state.UserReducer.topOneReferral,
+    topTwoReferral: state.UserReducer.topTwoReferral,
+    topThreeReferral: state.UserReducer.topThreeReferral,
+    topFourReferral: state.UserReducer.topFourReferral,
+    topFiveReferral: state.UserReducer.topFiveReferral,
+    topReferralNumber1: state.UserReducer.topReferralNumber1,
+    topReferralNumber2: state.UserReducer.topReferralNumber2,
+    topReferralNumber3: state.UserReducer.topReferralNumber3,
+    topReferralNumber4: state.UserReducer.topReferralNumber4,
+    topReferralNumber5: state.UserReducer.topReferralNumber5,
+    topFiveReferralsFromFirebase:
+      state.UserReducer.topFiveReferralsFromFirebase,
+  }));
+
   var settings = {
     dots: false,
     infinite: true,
     speed: 1000,
-    slidesToShow: 3,
+    slidesToShow:
+      topFiveReferralsFromFirebase && topFiveReferralsFromFirebase.length > 3
+        ? 3
+        : topFiveReferralsFromFirebase.length,
+
     slidesToScroll: 3,
     initialSlide: 0,
     arrows: false,
@@ -56,33 +88,7 @@ const Carousel = (props) => {
     ],
   };
 
-  const {
-    topOneReferral,
-    topTwoReferral,
-    topThreeReferral,
-    topFourReferral,
-    topFiveReferral,
-    topReferralNumber1,
-    topReferralNumber2,
-    topReferralNumber3,
-    topReferralNumber4,
-    topReferralNumber5,
-    topFiveReferralsFromFirebase,
-  } = useSelector((state) => ({
-    topOneReferral: state.UserReducer.topOneReferral,
-    topTwoReferral: state.UserReducer.topTwoReferral,
-    topThreeReferral: state.UserReducer.topThreeReferral,
-    topFourReferral: state.UserReducer.topFourReferral,
-    topFiveReferral: state.UserReducer.topFiveReferral,
-    topReferralNumber1: state.UserReducer.topReferralNumber1,
-    topReferralNumber2: state.UserReducer.topReferralNumber2,
-    topReferralNumber3: state.UserReducer.topReferralNumber3,
-    topReferralNumber4: state.UserReducer.topReferralNumber4,
-    topReferralNumber5: state.UserReducer.topReferralNumber5,
-    topFiveReferralsFromFirebase:
-      state.UserReducer.topFiveReferralsFromFirebase,
-  }));
-
+  
   return (
     <>
       <Slider {...settings}>
