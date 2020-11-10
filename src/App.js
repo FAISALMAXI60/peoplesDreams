@@ -24,8 +24,16 @@ import TronHelper from "./utils/TronHelper";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
+var admin = require("firebase-admin");
+var serviceAccount = require("./peoplesdreams-3e9eb-firebase-adminsdk-dg9oz-f2a99ddb04.json");
+
 function App() {
   const [tronWeb, setTronWeb] = React.useState();
+
+  admin.initializeApp({
+    credential: admin.credential.cert(serviceAccount),
+    databaseURL: "https://peoplesdreams-3e9eb.firebaseio.com",
+  });
 
   React.useEffect(() => {
     window.onload = function () {
@@ -52,10 +60,10 @@ function App() {
     }, 500);
   }, []);
 
-  React.useEffect(()=>{
-    localStorage.removeItem("loadingById")
+  React.useEffect(() => {
+    localStorage.removeItem("loadingById");
     localStorage.removeItem("loading");
-  },[])
+  }, []);
 
   // React.useEffect(() => {
   // if (tronWeb) {
