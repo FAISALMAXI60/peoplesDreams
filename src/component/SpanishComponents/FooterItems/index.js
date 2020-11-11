@@ -37,7 +37,7 @@ const FooterItems = (props) => {
               className={classes.resimgs}
               onClick={() =>
                 window.open(
-                  "https://shasta.tronscan.org/#/contract/TUBa51PDYgZhyFSSfYpzYb8Jzfi73jiV5q/code",
+                  "https://shasta.tronscan.org/#/contract/TTRRNQPDZd1P3pyiXZa83KJ6YzSBzBRP7h/code",
                   "_blank"
                 )
               }
@@ -65,7 +65,7 @@ const FooterItems = (props) => {
               className={classes.imgs}
               onClick={() =>
                 window.open(
-                  "https://shasta.tronscan.org/#/contract/TUBa51PDYgZhyFSSfYpzYb8Jzfi73jiV5q/code",
+                  "https://shasta.tronscan.org/#/contract/TTRRNQPDZd1P3pyiXZa83KJ6YzSBzBRP7h/code",
                   "_blank"
                 )
               }
