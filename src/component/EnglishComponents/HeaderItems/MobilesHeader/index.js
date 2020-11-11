@@ -30,6 +30,7 @@ const MobileHeader = (props) => {
       {isAuthenticated ? (
         <span
           style={{
+            zIndex:1000,
             position: "absolute",
             right: 15,
             top: 10,

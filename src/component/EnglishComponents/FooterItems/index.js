@@ -5,7 +5,7 @@ import Grid from "@material-ui/core/Grid";
 
 import button1 from "../../../assets/buttons/button1.png";
 import button2 from "../../../assets/buttons/button2.png";
-import button3 from "../../../assets/buttons/button3.png";
+// import button3 from "../../../assets/buttons/button3.png";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
 import footerIcon from "../../../assets/ICONS.png";
 
@@ -36,13 +36,19 @@ const FooterItems = (props) => {
               className={classes.imgs}
               onClick={() =>
                 window.open(
-                  "https://shasta.tronscan.org/#/contract/TXzxBuwgJ8dxnEhoUvkRR7UF9V1KFiHXha/code",
+                  "https://shasta.tronscan.org/#/contract/TTPEZ9tYHDTY5c7xam1GwQosX5ANHCiZVL/code",
                   "_blank"
                 )
               }
             />
-            <img src={button2} className={classes.imgs} />
-            <img src={button3} className={classes.imgs} />
+            <img
+              src={button2}
+              className={classes.imgs}
+              onClick={() =>
+                window.open("http://peoplesdreams.epizy.com", "_blank")
+              }
+            />
+            {/* <img src={button3} className={classes.imgs} /> */}
           </div>
         ) : (
           <>
@@ -52,7 +58,7 @@ const FooterItems = (props) => {
               className={classes.imgs}
               onClick={() =>
                 window.open(
-                  "https://shasta.tronscan.org/#/contract/TXzxBuwgJ8dxnEhoUvkRR7UF9V1KFiHXha/code",
+                  "https://shasta.tronscan.org/#/contract/TTPEZ9tYHDTY5c7xam1GwQosX5ANHCiZVL/code",
                   "_blank"
                 )
               }
@@ -66,7 +72,7 @@ const FooterItems = (props) => {
               }
             />
 
-            <img src={button3} className={classes.imgs} />
+            {/* <img src={button3} className={classes.imgs} /> */}
           </>
         )}
       </Grid>

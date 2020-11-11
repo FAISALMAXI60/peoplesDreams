@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import useStyles from "./styles";
 import Grid from "@material-ui/core/Grid";
 import TextField from "@material-ui/core/TextField";
@@ -15,6 +15,13 @@ import { useSelector } from "react-redux";
 
 const StationIndicatorItems = (props) => {
   const classes = useStyles();
+  const [iStart, setIStart] = useState("");
+  const [iOne, setIOne] = useState("");
+  const [iTwo, setITwo] = useState("");
+  const [iThree, setIThree] = useState("");
+  const [iFour, setIFour] = useState("");
+  const [ifinish, setIFinish] = useState("");
+
   const {
     startIndicator,
     indicatorOne,
@@ -22,6 +29,13 @@ const StationIndicatorItems = (props) => {
     indicatorThree,
     indicatorFour,
     finishIndicator,
+
+    startStation,
+    stationOne,
+    stationTwo,
+    stationThree,
+    stationFour,
+    finishStation,
   } = useSelector((state) => ({
     startIndicator: state.UserReducer.startIndicator,
     indicatorOne: state.UserReducer.indicatorOne,
@@ -29,7 +43,95 @@ const StationIndicatorItems = (props) => {
     indicatorThree: state.UserReducer.indicatorThree,
     indicatorFour: state.UserReducer.indicatorFour,
     finishIndicator: state.UserReducer.finishIndicator,
+
+
+    startStation: state.UserReducer.startStation,
+    stationOne: state.UserReducer.stationOne,
+    stationTwo: state.UserReducer.stationTwo,
+    stationThree: state.UserReducer.stationThree,
+    stationFour: state.UserReducer.stationFour,
+    finishStation: state.UserReducer.finishStation,
   }));
+
+  React.useEffect(() => {
+    if (
+      startStation === true &&
+      stationOne === false &&
+      stationTwo === false &&
+      stationThree === false &&
+      stationFour === false &&
+      finishStation === false
+    ) {
+      setIStart("#FFCD36");
+    } else if (
+      startStation == true &&
+      stationOne === true &&
+      stationTwo === false &&
+      stationThree === false &&
+      stationFour === false &&
+      finishStation === false
+    ) {
+      setIStart("");
+      setIOne("#FFCD36");
+    } else if (
+      startStation == true &&
+      stationOne === true &&
+      stationTwo === true &&
+      stationThree === false &&
+      stationFour === false &&
+      finishStation === false
+    ) {
+      setIStart("");
+      setIOne("");
+      setITwo("#FFCD36");
+    } else if (
+      startStation == true &&
+      stationOne === true &&
+      stationTwo === true &&
+      stationThree === true &&
+      stationFour === false &&
+      finishStation === false
+    ) {
+      setIStart("");
+      setIOne("");
+      setITwo("");
+      setIThree("#FFCD36");
+    } else if (
+      startStation == true &&
+      stationOne === true &&
+      stationTwo === true &&
+      stationThree === true &&
+      stationFour === true &&
+      finishStation === false
+    ) {
+      setIStart("");
+      setIOne("");
+      setITwo("");
+      setIThree("");
+      setIFour("#FFCD36");
+    } else if (
+      startStation == true &&
+      stationOne === true &&
+      stationTwo === true &&
+      stationThree === true &&
+      stationFour === true &&
+      finishStation === true
+    ) {
+      setIStart("");
+      setIOne("");
+      setITwo("");
+      setIThree("");
+      setIFour("");
+      setIFinish("#FFCD36");
+    }
+  }, [
+    startStation,
+    stationOne,
+    stationTwo,
+    stationThree,
+    stationFour,
+    finishStation,
+  ]);
 
   const indicators = [
     { title: "Arranque", value: startIndicator },
@@ -48,10 +150,28 @@ const StationIndicatorItems = (props) => {
         </Typography>
       </Grid>
       <Grid item xs={12} className={classes.indicatorsContainer}>
-        {indicators.map((i) => {
+        {indicators.map((i,index) => {
           return (
             <div className={classes.contain}>
-              <div className={classes.indicator}>
+              <div
+                className={classes.indicator}
+                style={{
+                  backgroundColor:
+                    index === 0
+                      ? iStart
+                      : index === 1
+                      ? iOne
+                      : index === 2
+                      ? iTwo
+                      : index === 3
+                      ? iThree
+                      : index === 4
+                      ? iFour
+                      : index === 5
+                      ? ifinish
+                      : "",
+                }}
+              >
                 <span
                   style={{
                     display: "flex",

@@ -121,9 +121,188 @@ const StationCards = (props) => {
   };
 
   return (
+    // <Grid container className={classes.cardMain}>
+    //   <Grid item sm={6} md={6} lg={4} className={classes.imgContainer}>
+    //     {startStation && paymentForStart >= 3 ? (
+    //       <img src={startActive} className={classes.cards} />
+    //     ) : (
+    //       <>
+    //         <div>
+    //           <img
+    //             src={start}
+    //             className={classes.cards}
+    //             title="click on the image to active it"
+    //             style={{ cursor: "pointer" }}
+    //           />
+    //           <Button
+    //             disabled={paymentForStart >= 3 ? false : true}
+    //             variant="contained"
+    //             color="primary"
+    //             className={classes.buyButtonStyling}
+    //             onClick={buyStationOne}
+    //           >
+    //             COMPRA/BUY
+    //           </Button>
+    //         </div>
+    //       </>
+    //     )}
+    //   </Grid>
+    //   <Grid item sm={6} md={6} lg={4} className={classes.imgContainer}>
+    //     {stationOne && paymentForOne >= 3 ? (
+    //       <img src={stationActive1} className={classes.cards} />
+    //     ) : (
+    //       <>
+    //         <img
+    //           src={station1}
+    //           className={classes.cards}
+    //           style={{ cursor: "pointer" }}
+    //           title="click on the image to active it"
+    //         />
+    //         <Button
+    //           onClick={() => buyStationFunction(1, 140)}
+    //           disabled={
+    //             (stationOne === true && paymentForOne < 3) ||
+    //             startStation === false
+    //               ? true
+    //               : false
+    //           }
+    //           variant="contained"
+    //           color="primary"
+    //           className={classes.buyButtonStyling}
+    //         >
+    //           COMPRA/BUY
+    //         </Button>
+    //       </>
+    //     )}
+    //   </Grid>
+    //   <Grid item sm={6} md={6} lg={4} className={classes.imgContainer}>
+    //     {stationTwo && paymentForTwo >= 3 ? (
+    //       <img src={stationActive2} className={classes.cards} />
+    //     ) : (
+    //       <>
+    //         <img
+    //           src={station2}
+    //           className={classes.cards}
+    //           style={{ cursor: "pointer" }}
+    //           title="click on the image to active it"
+    //         />
+    //         <Button
+    //           onClick={() => buyStationFunction(2, 280)}
+    //           disabled={
+    //             (stationTwo === true && paymentForTwo < 3) ||
+    //             startStation === false ||
+    //             stationOne === false
+    //               ? true
+    //               : false
+    //           }
+    //           variant="contained"
+    //           color="primary"
+    //           className={classes.buyButtonStyling}
+    //         >
+    //           COMPRA/BUY
+    //         </Button>
+    //       </>
+    //     )}
+    //   </Grid>
+    //   <Grid item sm={6} md={6} lg={4} className={classes.imgContainer}>
+    //     {stationThree && paymentForThree >= 3 ? (
+    //       <img src={stationActive3} className={classes.cards} />
+    //     ) : (
+    //       <>
+    //         <img
+    //           src={station3}
+    //           className={classes.cards}
+    //           style={{ cursor: "pointer" }}
+    //           title="click on the image to active it"
+    //         />
+    //         <Button
+    //           className={classes.buyButtonStyling}
+    //           onClick={() => buyStationFunction(3, 560)}
+    //           disabled={
+    //             (stationThree === true && paymentForThree < 3) ||
+    //             startStation === false ||
+    //             stationOne === false ||
+    //             stationTwo === false
+    //               ? true
+    //               : false
+    //           }
+    //           variant="contained"
+    //           color="primary"
+    //         >
+    //           COMPRA/BUY
+    //         </Button>
+    //       </>
+    //     )}
+    //   </Grid>
+    //   <Grid item sm={6} md={6} lg={4} className={classes.imgContainer}>
+    //     {stationFour && paymentForFour >= 3 ? (
+    //       <img src={stationActive4} className={classes.cards} />
+    //     ) : (
+    //       <>
+    //         <img
+    //           src={station4}
+    //           className={classes.cards}
+    //           style={{ cursor: "pointer" }}
+    //           title="click on the image to active it"
+    //         />
+
+    //         <Button
+    //           onClick={() => buyStationFunction(4, 1120)}
+    //           disabled={
+    //             (stationFour === true && paymentForFour < 3) ||
+    //             startStation === false ||
+    //             stationOne === false ||
+    //             stationTwo === false ||
+    //             stationThree === false
+    //               ? true
+    //               : false
+    //           }
+    //           variant="contained"
+    //           color="primary"
+    //           className={classes.buyButtonStyling}
+    //         >
+    //           COMPRA/BUY
+    //         </Button>
+    //       </>
+    //     )}
+    //   </Grid>
+    //   <Grid item sm={6} md={6} lg={4} className={classes.imgContainer}>
+    //     {finishStation && paymentForFive >= 3 ? (
+    //       <img src={finishActive} className={classes.cards} />
+    //     ) : (
+    //       <>
+    //         <img
+    //           src={finish}
+    //           className={classes.cards}
+    //           style={{ cursor: "pointer" }}
+    //           title="click on the image to active it"
+    //         />
+    //         <Button
+    //           onClick={() => buyStationFunction(5, 2240)}
+    //           disabled={
+    //             (finishStation === true && paymentForFive < 3) ||
+    //             startStation === false ||
+    //             stationOne === false ||
+    //             stationTwo === false ||
+    //             stationThree === false ||
+    //             stationFour === false
+    //               ? true
+    //               : false
+    //           }
+    //           variant="contained"
+    //           color="primary"
+    //           className={classes.buyButtonStyling}
+    //         >
+    //           COMPRA/BUY
+    //         </Button>
+    //       </>
+    //     )}
+    //   </Grid>
+    // </Grid>
+
     <Grid container className={classes.cardMain}>
       <Grid item sm={6} md={6} lg={4} className={classes.imgContainer}>
-        {startStation && paymentForStart >= 3 ? (
+        {startStation ? (
           <img src={startActive} className={classes.cards} />
         ) : (
           <>
@@ -135,7 +314,6 @@ const StationCards = (props) => {
                 style={{ cursor: "pointer" }}
               />
               <Button
-                disabled={paymentForStart >= 3 ? false : true}
                 variant="contained"
                 color="primary"
                 className={classes.buyButtonStyling}
@@ -148,7 +326,7 @@ const StationCards = (props) => {
         )}
       </Grid>
       <Grid item sm={6} md={6} lg={4} className={classes.imgContainer}>
-        {stationOne && paymentForOne >= 3 ? (
+        {stationOne ? (
           <img src={stationActive1} className={classes.cards} />
         ) : (
           <>
@@ -160,12 +338,7 @@ const StationCards = (props) => {
             />
             <Button
               onClick={() => buyStationFunction(1, 140)}
-              disabled={
-                (stationOne === true && paymentForOne < 3) ||
-                startStation === false
-                  ? true
-                  : false
-              }
+              disabled={startStation === true ? false : true}
               variant="contained"
               color="primary"
               className={classes.buyButtonStyling}
@@ -176,7 +349,7 @@ const StationCards = (props) => {
         )}
       </Grid>
       <Grid item sm={6} md={6} lg={4} className={classes.imgContainer}>
-        {stationTwo && paymentForTwo >= 3 ? (
+        {stationTwo ? (
           <img src={stationActive2} className={classes.cards} />
         ) : (
           <>
@@ -189,11 +362,7 @@ const StationCards = (props) => {
             <Button
               onClick={() => buyStationFunction(2, 280)}
               disabled={
-                (stationTwo === true && paymentForTwo < 3) ||
-                startStation === false ||
-                stationOne === false
-                  ? true
-                  : false
+                startStation === true && stationOne === true ? false : true
               }
               variant="contained"
               color="primary"
@@ -205,7 +374,7 @@ const StationCards = (props) => {
         )}
       </Grid>
       <Grid item sm={6} md={6} lg={4} className={classes.imgContainer}>
-        {stationThree && paymentForThree >= 3 ? (
+        {stationThree ? (
           <img src={stationActive3} className={classes.cards} />
         ) : (
           <>
@@ -219,12 +388,10 @@ const StationCards = (props) => {
               className={classes.buyButtonStyling}
               onClick={() => buyStationFunction(3, 560)}
               disabled={
-                (stationThree === true && paymentForThree < 3) ||
-                startStation === false ||
-                stationOne === false ||
-                stationTwo === false
-                  ? true
-                  : false
+                startStation === true &&
+                (stationOne === true) & (stationTwo === true)
+                  ? false
+                  : true
               }
               variant="contained"
               color="primary"
@@ -235,7 +402,7 @@ const StationCards = (props) => {
         )}
       </Grid>
       <Grid item sm={6} md={6} lg={4} className={classes.imgContainer}>
-        {stationFour && paymentForFour >= 3 ? (
+        {stationFour ? (
           <img src={stationActive4} className={classes.cards} />
         ) : (
           <>
@@ -249,13 +416,12 @@ const StationCards = (props) => {
             <Button
               onClick={() => buyStationFunction(4, 1120)}
               disabled={
-                (stationFour === true && paymentForFour < 3) ||
-                startStation === false ||
-                stationOne === false ||
-                stationTwo === false ||
-                stationThree === false
-                  ? true
-                  : false
+                startStation === true &&
+                stationOne === true &&
+                stationTwo === true &&
+                stationThree === true
+                  ? false
+                  : true
               }
               variant="contained"
               color="primary"
@@ -267,7 +433,7 @@ const StationCards = (props) => {
         )}
       </Grid>
       <Grid item sm={6} md={6} lg={4} className={classes.imgContainer}>
-        {finishStation && paymentForFive >= 3 ? (
+        {finishStation ? (
           <img src={finishActive} className={classes.cards} />
         ) : (
           <>
@@ -280,14 +446,13 @@ const StationCards = (props) => {
             <Button
               onClick={() => buyStationFunction(5, 2240)}
               disabled={
-                (finishStation === true && paymentForFive < 3) ||
-                startStation === false ||
-                stationOne === false ||
-                stationTwo === false ||
-                stationThree === false ||
-                stationFour === false
-                  ? true
-                  : false
+                startStation === true &&
+                stationOne === true &&
+                stationTwo === true &&
+                stationThree === true &&
+                stationFour === true
+                  ? false
+                  : true
               }
               variant="contained"
               color="primary"
