@@ -26,9 +26,9 @@ export const environment = {
   defaultRefAddress: "TKACovBPFcAiyzwJprjY96fc4fo8wJs1Kv",
   // contractAddress: 'THzXYenoaiap47c1kNLh9hrNcjziZo2FNu',
   telegramLink: "https://t.me/tronbrun",
-  contractAddress: "TTRRNQPDZd1P3pyiXZa83KJ6YzSBzBRP7h",
+  contractAddress: "TTSgK2S6G66EC47Kcwnejwu3eNrewKVLyN",
   contractLink:
-    "https://shasta.tronscan.org/#/contract/TTRRNQPDZd1P3pyiXZa83KJ6YzSBzBRP7h/code",
+    "https://shasta.tronscan.org/#/contract/TTSgK2S6G66EC47Kcwnejwu3eNrewKVLyN/code",
 };
 
 
